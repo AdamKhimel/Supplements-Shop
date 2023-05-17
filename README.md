@@ -28,7 +28,7 @@ To get a local copy up and running, follow these steps:
 
 1. Clone the repository:
 
-`git clone [https://github.com/AdamKhimel/Supplements-Shop]
+`git clone https://github.com/AdamKhimel/Supplements-Shop`
 
 2. Navigate into the cloned repository directory:
 
