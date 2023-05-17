@@ -1,0 +1,22 @@
+<div class="image">
+<div class="container">
+  <div class="card_box" *ngFor="let product of products">
+    <div class="card mb-4 box-shadow">
+      <img [src]="product.imageUrl" alt="{{product.name}}">
+      <div class="card-body">
+        <div class="product-details">
+          <h4 class="card-title">{{ product.name }}</h4>
+          <p class="product-price">{{ product.price | currency }}</p>
+          <p class="card-text product-description" *ngIf="product.showDescription">{{ product.description }}</p>
+        </div>
+        <div class="button-group">
+          <button type="button" class="btn btn-sm btn-primary" (click)="addToCart(product)">Add to Cart</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary" (click)="product.showDescription = !product.showDescription">
+            {{ product.showDescription ? 'Show less' : 'Show more' }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

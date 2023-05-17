@@ -1,0 +1,66 @@
+.my-products {
+  padding-top: 100px;
+}
+
+.card-img-top {
+  max-height: 500px; 
+  max-width: 250px;
+  object-fit: cover;
+}
+.image {
+  background-image: url("../../../assets/images/gym.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_box {
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+  background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.55);
+  cursor: pointer;
+  transition: all .3s;
+  &:hover {
+    transform: scale(0.9);
+  }
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-details {
+  h4 {
+    margin-bottom: 0.5em;
+  }
+
+  .product-price {
+    color: #ff6547;
+    font-size: 1.2em;
+  }
+
+  .product-description {
+    margin-top: 1em;
+  }
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    width: 45%;
+  }
+}
+

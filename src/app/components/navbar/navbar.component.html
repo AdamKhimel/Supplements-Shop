@@ -1,0 +1,22 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <a routerLink="/home" class="navbar-logo-container">
+      <img [src]="(imageUrl$ | async)" alt="Musy" class="navbar-logo">
+    </a>
+
+    <div class="dropdown">
+      <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+      <mat-menu #menu="matMenu">
+        <a mat-menu-item routerLink="/product-list">Products</a>
+        <ng-container *ngIf="!(authService.user$ | async); else loggedInMenu">
+          <a mat-menu-item routerLink="/login">Login</a>
+          <a mat-menu-item routerLink="/signup">Signup</a>
+        </ng-container>
+        <ng-template #loggedInMenu>
+          <a mat-menu-item routerLink="/cart">Cart</a>
+          <a mat-menu-item routerLink="/home" (click)="authService.signOut()">Logout</a>
+        </ng-template>
+      </mat-menu>
+    </div>
+  </div>
+</nav>

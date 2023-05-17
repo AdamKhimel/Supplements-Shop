@@ -1,0 +1,25 @@
+
+  
+  <main>
+    <section class="hero">
+      <h1 style="color: white;">Welcome to our online store</h1>
+      <p style="color: whitesmoke;">Shop for the latest products from our curated collection</p>
+      <a routerLink="/product-list" class="btn btn-primary">View Featured Products</a>
+    </section>
+  
+    <section class="products">
+      <h2>Featured Products</h2>
+      <div class="product-grid">
+        <div class="product-card" *ngFor="let product of featuredProducts">
+          <a [routerLink]="['/product-list', product.id]">
+            <img [src]="product.imageUrl" alt="Product Image" />
+            <h3>{{ product.name }}</h3>
+            <p class="price">{{ product.price | currency }}</p>
+          </a>
+          <button class="btn btn-secondary" (click)="addToCart(product)">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+  

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "online-supplements-shop": {
+      "hosting": {
+        "online-supplements-shop": [
+          "online-supplements-shop"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "online-supplements-shop"
+  }
+}
